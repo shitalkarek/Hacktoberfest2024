@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern 3D Button</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f7f8fa;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .btn-modern {
+      font-size: 18px;
+      padding: 20px 40px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4), 0 5px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-modern::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
+      transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    .btn-modern:hover::before {
+      width: 0;
+      height: 0;
+      top: 50%;
+      left: 50%;
+    }
+
+    .btn-modern:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(59, 130, 246, 0.4), 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-modern:active {
+      transform: translateY(2px);
+      box-shadow: 0 6px 12px rgba(59, 130, 246, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn-modern">Get Started</button>
+
+</body>
+</html>
